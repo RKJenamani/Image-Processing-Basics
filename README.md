@@ -116,7 +116,8 @@ GAUSSIAN BLUR:\
 
 Task 4: Convert the famous image 'Lenna' into greyscale.\
 Task 5: Implement mean and median blur on an image.\
-Task 3: Invert an image
+
+# TO BE EDITED
 
 (1) Started with various methods of implementation of gaussian blur like border, basic wrap round, reflection.
 For the corners and edges int the images, there
