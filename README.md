@@ -22,7 +22,7 @@ A pixel can be characterised by a single number denoting the intensity of white.
 0->Black\
 255->White
 
-## Programming
+## Basic Programming
 
 The programming is same as basic C++ with the inclusion of a few classes and functions.
 We have to include the following libraries at the start of each IP program.
@@ -41,24 +41,77 @@ Mat imgname(no. of rows, no. of columns, CV_8UC1,Scalar( no. for intensity of W)
 *Syntax for triple channel:* \
 Mat imgname(no. Of rows, no. of columns,CV_8UC3,Scalar(B,G,R);
 
-**To display an Image:**\
+**To display an Image:**
+
+*Syntax:*\
 namedWindow( “windowname”,WINDOW_NORMAL);\
 inshow(“windowname”, imgname);\
-waitKey(0);\
+waitKey(0);
 
 WINDOW_NORMAL: Size of image not fixed\
 alternate: WINDOW_AUTOSIZE: Size of image fixed
 
 **To read no. of pixels from an Imported Image**\
-img.rows->gives no. Of rows
+img.rows->gives no. Of rows\
 img.cols->gives no. Of columns
 
-mat img1(img.rows,img.columns,CV_8UC3,scalar(0,255,255);
+*Syntax:* mat img1(img.rows,img.columns,CV_8UC3,scalar(0,255,255);
 
 **To write (save) an Image:**
 
-imwrite(“name.png”,imgname);\
+*Syntax:* imwrite(“name.png”,imgname);\
 Saves the image imgname at the same location as code by the name name.png
+
+#### Tasks:
+
+Task 1: Create a yellow box.\
+Task 2: Create a checkboard.\
+Task 3: Invert an image
+
+## Converting a image
+
+**Methods to convert a COLOUR IMAGE into a GRAYSCALE IMAGE**\
+1.G+(R+G+B)/3
+2.G=(Max(B,G,R)+Min(B,G,R))/2
+3.G=0.21R+0.72G+0.07B (most accurate as eyes are most sensitive to green colour and it takes into account each colour)
+
+**Conversion of an IMAGE into a BINARY IMAGE**\
+To convert an image into a binary image, pixels having intensity below a threshold are assigned black while pixels having intensity above a threshold are assigned white.
+
+**Histogram of frequency of intensity in an image**
+
+**CONTRAST and BRIGHTNESS**\
+
+Contrast:Relative difference in intensities of pixels \
+Brightness: directly proportional to instensity of pixels
+
+->Multiplying each pixel with a number a will change both brightness and contrast of an image.\
+->Adding a number a to each pixel will change the brightness of an image, but not the contrast.
+
+**ROTATION of an IMAGE:**
+
+**MORPHING of 2 IMAGES:**
+
+**SCALING of an IMAGE:**
+
+UPSCALING:\
+Each pixel is converted to a kernel\
+DOWNSCALE:\
+Each kernel is converted to a single pixel\
+The intensity of the pixel is equal to the mean of intensities of the pixels in the kernel.
+FRACTIONAL SCALING:\
+As first downscale then upscale leads to loss of information , first upscale then downscale is preferred.
+
+**BLURRING an IMAGE:**
+
+MEAN BLUR:\
+The  new intensity of each pixel is the mean of intensities of the pixels of the kernel centered around this pixel.
+
+MEDIAN BLUR:\
+The  new intensity of each pixel is the median of intensities of the pixels of the kernel centered around this pixel.
+
+GAUSSIAN BLUR:\
+
 
 
 
