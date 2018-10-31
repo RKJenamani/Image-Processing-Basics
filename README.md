@@ -1,7 +1,7 @@
 # Image-Processing-Basics
-## Intoduction to image processing using OpenCV library.
+### Intoduction to image processing using OpenCV library.
 
-### Image
+## Image
 Each image is made up of a certain no. of pixels say 50*50 or 200*200. Hence each image can be said to be a conglomeration of squares and each square can be denoted by the ordered pair (i,j). Each square projects a single colour. Now two situations arise:
 
 1.Image is Colored
@@ -22,16 +22,16 @@ A pixel can be characterised by a single number denoting the intensity of white.
 0->Black\
 255->White
 
-### Programming
+## Programming
 
 The programming is same as basic C++ with the inclusion of a few classes and functions.
 We have to include the following libraries at the start of each IP program.
 
 #include “opencv2/highgui/highgui.hpp”\
 #include “opencv2/imgproc/imgproc.hpp”\
-#include “opencv2/core/core.hpp”\
+#include “opencv2/core/core.hpp”
 
-### To create an image:
+**To create an image:**
 
 The class ‘Mat’ is used for the intialization of object (an image) with a specified no. of pixels and channel nos.
 
@@ -41,12 +41,25 @@ Mat imgname(no. of rows, no. of columns, CV_8UC1,Scalar( no. for intensity of W)
 *Syntax for triple channel:* \
 Mat imgname(no. Of rows, no. of columns,CV_8UC3,Scalar(B,G,R);
 
-*To display an Image:*\
+**To display an Image:**\
 namedWindow( “windowname”,WINDOW_NORMAL);\
 inshow(“windowname”, imgname);\
 waitKey(0);\
 
-
 WINDOW_NORMAL: Size of image not fixed\
 alternate: WINDOW_AUTOSIZE: Size of image fixed
+
+**To read no. of pixels from an Imported Image**\
+img.rows->gives no. Of rows
+img.cols->gives no. Of columns
+
+mat img1(img.rows,img.columns,CV_8UC3,scalar(0,255,255);
+
+**To write (save) an Image:**
+
+imwrite(“name.png”,imgname);\
+Saves the image imgname at the same location as code by the name name.png
+
+
+
 
