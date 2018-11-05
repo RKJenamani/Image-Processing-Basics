@@ -88,6 +88,12 @@ Brightness: directly proportional to instensity of pixels
 
 **ROTATION of an IMAGE:**
 
+The rotation operator performs a transformation of the form:
+
+x2=cos(
+
+where Eqn:eqnxyo are the coordinates of the center of rotation (in the input image) and Eqn:eqntheta is the angle of rotation with clockwise rotations having positive angles. (Note here that we are working in image coordinates, so the y axis goes downward. Similar rotation formula can be defined for when the y axis goes upward.)
+
 **MORPHING of 2 IMAGES:**
 
 **SCALING of an IMAGE:**
