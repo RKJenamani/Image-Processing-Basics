@@ -71,14 +71,12 @@ Task 3: Invert an image
 ## Converting a image
 
 **Methods to convert a COLOUR IMAGE into a GRAYSCALE IMAGE**\
-1.G+(R+G+B)/3
-2.G=(Max(B,G,R)+Min(B,G,R))/2
+1.G+(R+G+B)/3 \
+2.G=(Max(B,G,R)+Min(B,G,R))/2 \
 3.G=0.21R+0.72G+0.07B (most accurate as eyes are most sensitive to green colour and it takes into account each colour)
 
 **Conversion of an IMAGE into a BINARY IMAGE**\
 To convert an image into a binary image, pixels having intensity below a threshold are assigned black while pixels having intensity above a threshold are assigned white.
-
-**Histogram of frequency of intensity in an image**
 
 **CONTRAST and BRIGHTNESS**
 
@@ -116,6 +114,7 @@ GAUSSIAN BLUR:\
 
 Task 4: Convert the famous image 'Lenna' into greyscale.\
 Task 5: Implement mean and median blur on an image.\
+Task 6: Histogram of frequency of intensity in an image.
 
 # TO BE EDITED
 
